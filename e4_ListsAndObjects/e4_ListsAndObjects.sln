@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_Smartphone", "6_Smartphon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_ListDiList", "7_ListDiList\7_ListDiList.csproj", "{8CD47BB4-7EC5-4B14-9C4C-DAEAC2292664}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Wall", "3_Wall\3_Wall.csproj", "{9AB016FA-CB02-4A83-B3C3-EC89C985849A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8CD47BB4-7EC5-4B14-9C4C-DAEAC2292664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CD47BB4-7EC5-4B14-9C4C-DAEAC2292664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CD47BB4-7EC5-4B14-9C4C-DAEAC2292664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB016FA-CB02-4A83-B3C3-EC89C985849A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB016FA-CB02-4A83-B3C3-EC89C985849A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB016FA-CB02-4A83-B3C3-EC89C985849A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB016FA-CB02-4A83-B3C3-EC89C985849A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

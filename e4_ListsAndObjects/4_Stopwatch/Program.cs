@@ -37,11 +37,7 @@ namespace _4_Stopwatch
             Console.Write("Fino a che numero riempio la lista? ");
 
             int input2 = ReadSafeFromConsole();
-
-            //List<int> initial = new List<int>();
-            //for (int i = 2; i <= input2; i++)
-            //    initial.Add(i);
-
+            
             List<Pairs> pairs = new List<Pairs>();
             
             for (int i = 2; i <= input2; i++)
