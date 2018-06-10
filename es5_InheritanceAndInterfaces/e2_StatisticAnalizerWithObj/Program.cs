@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2_StatisticAnalizerWithObj
+namespace e2_StatisticAnalizerWithObj
 {
     class Program
     {

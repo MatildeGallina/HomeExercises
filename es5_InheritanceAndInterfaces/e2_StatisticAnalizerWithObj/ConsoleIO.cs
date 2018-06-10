@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _2_StatisticAnalizerWithObj
+namespace e2_StatisticAnalizerWithObj
 {
     public class ConsoleIO : IInputOutput
     {

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_FileAndFolder", "1_FileAndFolder\1_FileAndFolder.csproj", "{40E87F94-1D38-4242-B84B-331974D2C627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e1_FileAndFolder", "e1_FileAndFolder\e1_FileAndFolder.csproj", "{40E87F94-1D38-4242-B84B-331974D2C627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_StatisticAnalizerWithObj", "2_StatisticAnalizerWithObj\2_StatisticAnalizerWithObj.csproj", "{986D97F1-8296-4D94-80DB-20101EB3FA5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e2_StatisticAnalizerWithObj", "e2_StatisticAnalizerWithObj\e2_StatisticAnalizerWithObj.csproj", "{986D97F1-8296-4D94-80DB-20101EB3FA5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e3_AskedMoneyFrom", "e3_AskedMoneyFrom\e3_AskedMoneyFrom.csproj", "{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{986D97F1-8296-4D94-80DB-20101EB3FA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{986D97F1-8296-4D94-80DB-20101EB3FA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{986D97F1-8296-4D94-80DB-20101EB3FA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
