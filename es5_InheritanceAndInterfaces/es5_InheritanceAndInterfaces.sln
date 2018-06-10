@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e3_AskedMoneyFrom", "e3_Ask
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e4_IDrawingConsole", "e4_IDrawingConsole\e4_IDrawingConsole.csproj", "{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e5_Arena", "e5_Arena\e5_Arena.csproj", "{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
