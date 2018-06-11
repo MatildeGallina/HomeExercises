@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e2_StatisticAnalizerWithObj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e3_AskedMoneyFrom", "e3_AskedMoneyFrom\e3_AskedMoneyFrom.csproj", "{6F2F542E-22E5-4F2F-BB24-82D70136BCB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e4_IDrawingConsole", "e4_IDrawingConsole\e4_IDrawingConsole.csproj", "{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e4_IDrawingConsole", "e4_IDrawingConsole\e4_IDrawingConsole.csproj", "{DCE75030-C0BA-4F17-ACB4-F3B5DBCC11DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e5_Arena", "e5_Arena\e5_Arena.csproj", "{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e5_Arena", "e5_Arena\e5_Arena.csproj", "{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e8_Tria", "e8_Tria\e8_Tria.csproj", "{BDF55317-3558-473C-9A98-30F032B112C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A0345AE-7339-4D10-8ED6-01FCFF8E7B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF55317-3558-473C-9A98-30F032B112C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF55317-3558-473C-9A98-30F032B112C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF55317-3558-473C-9A98-30F032B112C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF55317-3558-473C-9A98-30F032B112C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
