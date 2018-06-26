@@ -33,16 +33,11 @@ namespace ListBox_Trials
             ListRiserve.ItemsSource = list;
         }
 
-        private void Pieno_Click(object sender, RoutedEventArgs e)
+        private void Pieno_Click(object sender, RoutedEventArgs e, List<Riserva> list)
         {
-            List<Riserva> list = new List<Riserva>();
-
-            foreach (Riserva r in ListRiserve.SelectedItems)
-                if (r.Percentage < 100)
-                {
-                    r.Percentage = 100;
-                    list.Add(r);
-                }
+            for(int i = 0; i < list.Count; i++)
+                if (list[i].Percentage < 100)
+                    list[i].Percentage = 100;
 
             ListRiserve.ItemsSource = list;
         }
