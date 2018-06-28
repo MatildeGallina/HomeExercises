@@ -23,13 +23,13 @@ select * from Departures;
 
 -- select count(*) as CountOfCompanies from Companies
 
--- select TrainId, count(*) as Count
--- from Departures
--- group by TrainId
+ --select TrainId, count(*) as Count
+ --from Departures
+ --group by TrainId
 
--- select DAY([Time]) as Day, [Rail]
--- from Departures
--- group by DAY([Time]), [Rail]
+ --select DAY([Time]) as Day, [Rail]
+ --from Departures
+ --group by DAY([Time]), [Rail]
 
 -- select Rail, count(*) as Count
 -- from Departures
