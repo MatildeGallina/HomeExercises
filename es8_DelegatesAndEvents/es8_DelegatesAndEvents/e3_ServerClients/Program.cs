@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace e3_ServerClients
 {
@@ -12,12 +14,54 @@ namespace e3_ServerClients
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MyServer server1 = new MyServer("1");
+            MyClient client1 = new MyClient("1");
+            MyClient client2 = new MyClient("2");
+
+            server1.Notification += client1.SentNotification;
+
+            server1.ReceivedNotification(client1, "File salvato");
+
+            Console.Read();
         }
     }
 
-    public class Server
+    delegate void NotificationHandler(string message);
+
+    class MyServer
     {
-        public event Func<string, string> NewMessage;
+        public MyServer(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; set; }
+
+        public event NotificationHandler Notification;
+
+        public void ReceivedNotification(MyClient myClient, string message)
+        {
+            Console.WriteLine($"Server {Name} received a notification from {myClient.Name}.");
+            //Notification(this);
+            // è lo stesso di
+            Notification.Invoke(message);
+        }
+    }
+
+    class MyClient
+    {
+        public MyClient(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; set; }
+
+        public void SentNotification(string message)
+        {
+            Console.WriteLine($"Client {Name} sent a notification to the server: ");
+            Console.WriteLine(message);
+        }
     }
 }
+    

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\e3_ServerClients\e3_ServerClients.csproj" />
+    <ProjectReference Include="..\e4_Boiler\e4_Boiler.csproj" />
   </ItemGroup>
 
 </Project>
