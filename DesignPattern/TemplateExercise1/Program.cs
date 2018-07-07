@@ -87,7 +87,6 @@ namespace TemplateExercise1
             if(e.Contract == TipoContratto.Fixed)
             {
                 e.Salary = FixedSalary;
-                if(Today == DateTime.)
             }
             else if (e.Contract == TipoContratto.Percentage && Today.DayOfWeek == DayOfWeek.Friday)
             {

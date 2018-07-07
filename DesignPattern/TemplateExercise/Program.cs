@@ -1,6 +1,7 @@
 ﻿using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace TemplateExercise
@@ -23,13 +24,13 @@ namespace TemplateExercise
                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
                 "bill-export.xlsx");
 
-            var billExp = new BillExporter(filePath);
+            var billExp = new FlatDataExcelTable<InvoiceModel>(filePath);
 
             billExp.Export(models);
         }
     }
 
-    class InvoiceModel
+    public class InvoiceModel
     {
         public InvoiceModel() { }
 
@@ -65,13 +66,16 @@ namespace TemplateExercise
         public string Employee { get; set; }
     }
 
-    abstract class ExcelExport<T>
+    public abstract class ExcelExport<T>
     {
-        private string Path { get; set; }
+        private string _filePath;
 
-        private IEnumerable<InvoiceModel> list;
+        protected ExcelExport(string filePath)
+        {
+            _filePath = filePath;
+        }
 
-        void Export(IEnumerable<InvoiceModel> list)
+        public void Export(IEnumerable<InvoiceModel> list)
         {
             IEnumerable<T> result = Elaborate(list);
 
@@ -90,14 +94,18 @@ namespace TemplateExercise
         }
     }
 
-    class InvoiceModelExcelTable<T> : ExcelExport<T>
+    public class FlatDataExcelTable : ExcelExport<InvoiceModel>
     {
-        protected override IEnumerable<T> Elaborate(IEnumerable<InvoiceModel> list)
+        public FlatDataExcelTable(string filePath)
+            : base(filePath)
+        { }
+
+        protected override IEnumerable<InvoiceModel> Elaborate(IEnumerable<InvoiceModel> list)
         {
-            return (IEnumerable<T>)list;
+            return list;
         }
 
-        protected override object Transform(IEnumerable<T> result)
+        protected override object Transform(IEnumerable<InvoiceModel> result)
         {
             var cells = new List<Cell>();
 
@@ -121,33 +129,44 @@ namespace TemplateExercise
             }
         }
 
-        private void AddValues(List<Cell> cells, IEnumerable<T> result)
+        private void AddValues(List<Cell> cells, IEnumerable<InvoiceModel> result)
         {
             int row = 2;
 
-            foreach (var bill in result)
-            {
-                cells.Add(new Cell(row, 1, bill.Id));
-                cells.Add(new Cell(row, 2, bill.Emission.ToString("yyyy/MM/dd")));
-                cells.Add(new Cell(row, 3, bill.Employee));
-                row++;
+            for(int i = 0; i < )
 
-                foreach (var invoice in bill.Invoices)
-                {
-                    cells.Add(new Cell(row, 4, invoice.Id));
-                    cells.Add(new Cell(row, 5, invoice.ProductName));
-                    cells.Add(new Cell(row, 6, invoice.ProductPrice));
-                    cells.Add(new Cell(row, 7, invoice.Quantity));
-                    row++;
-                }
+            //foreach (var model in result)
+            //{
+            //    cells.Add(new Cell(row, 1, model.BillEmission))
+            //}
 
-                row++;
-            }
+            //foreach (var bill in result)
+            //{
+            //    cells.Add(new Cell(row, 1, bill.Id));
+            //    cells.Add(new Cell(row, 2, bill.Emission.ToString("yyyy/MM/dd")));
+            //    cells.Add(new Cell(row, 3, bill.Employee));
+            //    row++;
+
+            //    foreach (var invoice in bill.Invoices)
+            //    {
+            //        cells.Add(new Cell(row, 4, invoice.Id));
+            //        cells.Add(new Cell(row, 5, invoice.ProductName));
+            //        cells.Add(new Cell(row, 6, invoice.ProductPrice));
+            //        cells.Add(new Cell(row, 7, invoice.Quantity));
+            //        row++;
+            //    }
+
+            //    row++;
+            //}
         }
     }
 
     class SalesPerEmployeeExcelTable<T> : ExcelExport<T>
     {
+        public SalesPerEmployeeExcelTable(string filePath)
+            : base(filePath)
+        { }
+
         protected override IEnumerable<T> Elaborate(IEnumerable<InvoiceModel> list)
         {
             var salesPerEmployeeList = list
@@ -183,6 +202,10 @@ namespace TemplateExercise
 
     class BillInvoiceExcelTable<T> : ExcelExport<T>
     {
+        public BillInvoiceExcelTable(string filePath)
+            : base(filePath)
+        { }
+
         protected override IEnumerable<T> Elaborate(IEnumerable<InvoiceModel> list)
         {
             var billInvoiceLlist = list
