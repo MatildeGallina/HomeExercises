@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateExercise1", "Templa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateExercise", "TemplateExercise\TemplateExercise.csproj", "{23F51DF8-288E-4479-8163-B0B53441D80C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceModelBis", "InvoiceModelBis\InvoiceModelBis.csproj", "{F05658A3-D8A2-4E69-9D18-0E9D134FFB5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceModelBis", "InvoiceModelBis\InvoiceModelBis.csproj", "{F05658A3-D8A2-4E69-9D18-0E9D134FFB5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryExercise1", "FactoryExercise1\FactoryExercise1.csproj", "{A3715678-5BEE-493D-85E6-D59E780E0539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F05658A3-D8A2-4E69-9D18-0E9D134FFB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05658A3-D8A2-4E69-9D18-0E9D134FFB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05658A3-D8A2-4E69-9D18-0E9D134FFB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3715678-5BEE-493D-85E6-D59E780E0539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3715678-5BEE-493D-85E6-D59E780E0539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3715678-5BEE-493D-85E6-D59E780E0539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3715678-5BEE-493D-85E6-D59E780E0539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
