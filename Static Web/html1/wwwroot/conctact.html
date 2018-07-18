@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Meteo FVG</title>
+	</head>
+	<body>
+    <header>
+			<h1>Conctact us!</h1>
+    </header>
+
+    <form method="POST" action="message-received.html">
+		<div>
+			<label>email:</label>
+			<input name="email" type="email" placeholder="your.email@provider.it" />
+		</div>
+
+		<div>
+			<label>password:</label>
+			<input id="pass" type="password" minlength="8"/>
+		</div>
+
+		<div>
+			<label>name:</label>
+			<input name="name" type="text" placeholder="name surname" maxlength="100"/>
+		</div>
+
+		<div>
+			<label>gender:</label>
+			<input type="radio" name="gender" value="M" checked/>male
+			<input type="radio" name="gender" value="F" />female
+		</div>
+		
+		<div>
+			<label>date of birth:</label>
+			<input name="birth" type="date" />
+		</div>
+
+		<div>
+			<label>job:</label>
+			<input type="radio" name="job" value="S" />student
+			<input type="radio" name="job" value="W" />worker
+			<input type="radio" name="job" value="U" />unemployed
+		</div>
+
+		<div>
+			<label>available to hiring:</label>
+			<input name="availabele-to-hiring" type="checkbox" />
+		</div>
+
+		<div>
+			<label>message:</label>
+			<textarea rows="5" cols="40" placeholder="Your message ... "></textarea>
+		</div>
+
+		<div>
+			<input type="submit" value="Submit values" />
+		</div>
+    </form>
+	</body>
+</html>
