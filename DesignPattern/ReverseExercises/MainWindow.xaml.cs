@@ -47,10 +47,11 @@ namespace ReverseExercises
             };
         }
 
-        List<string> text = new List<string>();
-
         private string ReverseString(string directText)
         {
+            List<string> text = new List<string>();
+
+
             text.Add(directText);
             text.Reverse();
 
