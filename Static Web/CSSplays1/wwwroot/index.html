@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Meteo FVG</title>
+
+		<style>
+			.menu-item {
+				display:inline-block;
+				margin:5px;
+				padding:5px 20px;
+				background:#555;
+				color:white;
+				font-family:tahoma;
+			}
+
+			.menu-item:hover{
+				background-color:#444;
+			}
+
+			nav a img:hover{
+				background-clip: #0F0;
+			}
+
+			nav a img:active{
+				background-clip: #999;
+			}
+
+			.align-rigth{
+				float:right;
+			}
+		</style>
+	</head>
+	<body style="margin:0 auto;padding:0;max-width:1200px;">
+		<header style="font-family:Algerian;background-image:url('cover.jpg');background-size:cover;background-repeat:no-repeat">
+			<h1 style="text-align: center;font-size: 128px;background-color:rgba(255, 255, 255, 0.2);margin:0px">Meteo FVG</h1>
+			<p style="font-size:20px;text-align:center;">A website where to learn CSS3</p>
+		</header>
+			
+		<hr>
+
+		<main>
+			<a href="http://www.google.com">Source</a>
+
+			<h2>Index</h2>
+			<nav style="padding:10px;background-color:#DDD">
+				<a href="/" style="display:inline-block;vertical-align:middle;margin:5px">
+					<img src="home.png" height="24px">
+				</a>
+				<a href="#weather" class="menu-item">wheather</a>
+				<a href="#temperature" class="menu-item">temperature</a>
+				<a href="#pressure" class="menu-item">pressure</a>
+				<a href="conctact.html" class="menu-item align-rigth">conctact</a>
+			</nav>	
+
+			<section id="weather">
+				<h2>Wheater</h2>
+				<ol>
+					<li>Gorizia: sunny</li>
+					<li>Pordenone: cloudy</li>
+					<li>Trieste: sunny</li>
+					<li>Udine: rainy</li>
+				</ol>
+			</section>
+
+			<section id="temperature">
+				<h2>Temperature</h2>
+				<ul>
+					<li>Gorizia: 28°</li>
+					<li>Pordenone: 30°</li>
+					<li>Trieste: 27°</li>
+					<li>Udine: 30°</li>
+				</ul>
+			</section>
+
+			<section id="pressure">
+					<h2>Pressure</h2>
+					<ul>
+						<li>Gorizia: 1024</li>
+						<li>Pordenone: 1001</li>
+						<li>Trieste: 1025</li>
+						<li>Udine: 998</li>
+					</ul>
+				</section>
+		</main>
+
+		<aside>
+			<h2>We're hiring!</h2>
+			<p>We are looking for <em>expert</em> weathermen! Join us!
+				Call <strong>800.752.752</strong></p>
+		</aside>
+
+		<hr>
+
+		<footer>
+			<p>Corso IRES 2018 in programmazione .NET</p>
+		</footer>
+	</body>
+</html>
