@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        body{
+            margin: 0;
+            background-color: #eee;
+        }
+        .container{
+            width: 500px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background-color: white;
+            text-align: center;
+            font-size: 30px
+            
+            /* suluzione che tiene il div ancorato al margine superiore della finestra*/
+            /* position: fixed;
+            top: 0;
+            left: calc((100vw - 500px) / 2); */
+        }
+        p{
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .container div{
+            font-size: 0.8em;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p>A B C D E F G</p>
+            <div>
+                <p>A B C D E F G</p>
+                <div>
+                    <p>A B C D E F G</p>
+                    <div>
+                        <p>A B C D E F G</p>
+                        <div>
+                            <p>A B C D E F G</p>
+                            <div>
+                                <p>A B C D E F G</p>
+                            </div>                   
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
