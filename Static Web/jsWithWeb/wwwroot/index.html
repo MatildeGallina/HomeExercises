@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        console.log(`Hello!`)
+    </script>
+    <script src="js1.js"></script>
+    <script src="js2.js"></script>
+
+    <script>
+        window.onload = () => setTimeout(
+            () => {
+                var dateParagraph = document.getElementById('date-p')
+                var dateMessage = `Today is: is ${new Date()}`
+                console.log(dateMessage)
+                dateParagraph.textContent = dateMessage
+                dateParagraph.style.color = 'blue'
+            },
+            3000)
+
+            function onClicked(event){
+                console.log('You clicked me!')
+                console.log(`I am: `, this)
+                console.log('event', event)
+            }
+    </script>
+</head>
+<body>
+    <h1>Il Meteo</h1>
+    <p id="date-p">Loading current day ...</p>
+
+    <button onclick="(function() {console.log('I am: ', this) }) ()">
+        Click me! - I am window
+    </button>
+    <button onclick="(() => console.log('I am: ', this) ) ()">
+        Click me! - I am button
+    </button>
+    <button onclick="onClicked(event)">
+        Click me! - I am the event
+    </button>
+</body>
+</html>

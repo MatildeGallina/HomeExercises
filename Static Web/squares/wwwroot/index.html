@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+
+    <script>
+        function creatediv(){
+            var nuovoDiv = document.createElement("div");
+            nuovoDiv.innerHTML = "<h1>Ciao a tutti!</h1>";
+
+            // aggiunge l'elemento appena creato e il suo contenuto al DOM
+            var mio_div = document.getElementById("org_div");
+            document.body.insertBefore(nuovoDiv, mio_div);
+        }
+    </script>
+</head>
+<body id="org_div">
+    <button onclick="creatediv()">
+        click
+    </button>
+</body>
+</html>
