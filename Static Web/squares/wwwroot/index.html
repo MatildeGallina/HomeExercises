@@ -8,19 +8,76 @@
     <title>Document</title>
 
     <script>
-        function creatediv(){
-            var nuovoDiv = document.createElement("div");
-            nuovoDiv.innerHTML = "<h1>Ciao a tutti!</h1>";
+        function draw(event) {
+            // var clientX = onclick.width +"px"
+            // var clientY = onclick.height + "px"
 
-            // aggiunge l'elemento appena creato e il suo contenuto al DOM
-            var mio_div = document.getElementById("org_div");
-            document.body.insertBefore(nuovoDiv, mio_div);
+            var myDiv = document.createElement('div')
+            myDiv.style.width = "50px"
+            myDiv.style.height = "50px"
+            myDiv.style.backgroundColor = getRandomColor()
+            myDiv.style.position = "absolute"
+
+            myDiv.style.top = event.clientY - (25) +"px"
+            myDiv.style.left = event.clientX - (25) +"px"
+
+            document.body.appendChild(myDiv)
+            myDiv.onclick = changeColor
+            movingDiv(myDiv)
         }
-    </script>
+
+        function changeColor(event) { 
+            event.stopPropagation() 
+            this.style.backgroundColor = getRandomColor()
+            }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'
+            var color = '#'
+            for (var i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)]
+            }
+            
+            return color
+        }
+
+        function movingDiv(myDiv){
+            setTimeout(
+            () => {
+                var coordX = parseInt(myDiv.style.left)
+                var coordY = parseInt(myDiv.style.top)
+
+                if(coordX > 0){
+
+                    myDivMoveLeft(myDiv)
+                }
+                
+                if(coordX > 0){
+
+                    myDivMoveRigth(myDiv)
+                }
+            },
+            500)
+        }
+
+        function myDivMoveDown(myDiv){
+            myDiv.style.top += "5px" 
+        }
+
+        function myDivMoveTop(myDiv){
+            myDiv.style.down += "5px" 
+        }
+
+        function myDivMoveLeft(myDiv){
+            myDiv.style.rigth += "5px" 
+        }
+
+        function myDivMoveRigth(myDiv){
+            myDiv.style.left += "5px" 
+        }
+        </script>
 </head>
-<body id="org_div">
-    <button onclick="creatediv()">
-        click
-    </button>
+<body onclick="draw(event)">
+        
 </body>
 </html>

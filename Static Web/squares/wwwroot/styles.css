@@ -1,11 +1,4 @@
 body{
-    width: 1vmax;
-    height: 1vmax;
-    background-color: rgb(189, 189, 241);
-}
-
-div{
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    height: 100vh;
+    background-color: white;
 }
