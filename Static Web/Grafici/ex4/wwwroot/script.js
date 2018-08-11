@@ -21,6 +21,15 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height,color){
     ctx.restore();
 }
 
+function legendItem(name, color, ul){
+    var li = document.createElement("li");
+    li.style.listStyle = "none";
+    li.style.borderLeft = "20px solid " + color;
+    li.style.padding = "5px";
+    li.textContent = name;
+    ul.append(li);
+}
+
 var Barchart = function(options){
     this.options = options;
     this.canvas = options.canvas;
@@ -105,8 +114,20 @@ var Barchart = function(options){
                 barIndex++;
             }
 
+            var labelText = categ;
+            this.ctx.fillStyle = "black";
+            this.ctx.font = "bold 20px Arial";
+            this.ctx.fillText(labelText, startX, (this.canvas.height));
+
             collIndex ++;
         }
+
+        var legend = document.querySelector("legend[for='myCanvas']");
+        var ul = document.createElement("ul");
+        legend.append(ul);
+        legendItem("% Successi", this.colors[0 % this.colors.length], ul)
+        legendItem("% Complicazioni", this.colors[1 % this.colors.length], ul)
+        legendItem("% Decessi", this.colors[2 % this.colors.length], ul)
     }
 }
 
