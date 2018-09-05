@@ -1,0 +1,49 @@
+﻿@model List<SuperHero>
+
+<h1>SuperHeroes List</h1>
+
+<div class="text-right">
+    <a href="/superheroes/new" class="btn btn-primary">New SuperHero</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Strength</th>
+            <th>Birth</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@m.Name</td>
+                    <td>@m.Strength</td>
+                    <td>@m.Birth</td>
+                    <td>
+                        <a asp-controller="SuperHeroes"
+                           asp-action="Edit"
+                           asp-route-id="@m.Id"
+                           class="text-primary">Edit</a>
+                    </td>
+                    <td>
+                        <a asp-controller="SuperHeroes"
+                           asp-action="Delete"
+                           asp-route-id="@m.Id"
+                           class="text-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">Nessun Supereroe, il mondo è in pericolo!</td>
+            </tr>
+        }
+    </tbody>
+</table>

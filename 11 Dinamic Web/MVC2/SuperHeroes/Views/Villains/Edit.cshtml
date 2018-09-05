@@ -1,0 +1,55 @@
+﻿@model SuperHero
+
+<form method="POST">
+    <h1>@(Model.Id == 0 ? "New" : "Update") SuperHero</h1>
+
+    @* This is also correct but longer and more repetitive *@
+    @* @if(Model.Id == 0)
+        {
+            <h1>New SuperHero</h1>
+        }
+        else
+        {
+            <h1>Update SuperHero</h1>
+        } *@
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SecretName" class="control-label"></label>
+        <input asp-for="SecretName" class="form-control" />
+        <span asp-validation-for="SecretName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Birth" class="control-label"></label>
+        <input asp-for="Birth" class="form-control" type="date" />
+        <span asp-validation-for="Birth"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Strength" class="control-label"></label>
+        <input asp-for="Strength" class="form-control" type="number" />
+        <span asp-validation-for="Strength"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Wealth" class="control-label"></label>
+        <input asp-for="Wealth" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Wealth"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CanFly" class="control-label"></label>
+        <input asp-for="CanFly" class="form-control" type="checkbox" />
+        <span asp-validation-for="CanFly"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Save" />
+    </div>
+</form>
