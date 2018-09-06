@@ -12,10 +12,14 @@ namespace SuperHeroes.Controllers
     public class VillainsController : Controller
     {
         private IRepository<Villain> _repository;
+        private IRepository<SuperHero> _superHeroRepository;
 
-        public VillainsController(IRepository<Villain> repository)
+        public VillainsController(
+            IRepository<Villain> repository,
+            IRepository<SuperHero> superHeroRepository)
         {
             _repository = repository;
+            _superHeroRepository = superHeroRepository;
         }
 
         [HttpGet]
@@ -97,6 +101,19 @@ namespace SuperHeroes.Controllers
             {
                 return NotFound();
             }
+        }
+
+        [HttpGet]
+        public IActionResult Play()
+        {
+            var sh = _superHeroRepository.GetAll().First();
+            var v = _repository.GetAll().First();
+            v.Nemesis = sh;
+            _repository.Update(v);
+
+
+
+            return RedirectToAction(nameof(List));
         }
     }
 }

@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 
 namespace SuperHeroes.Models
 {
-        public class Villain
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public string BadActs { get; set; }
-            public bool HasMinions { get; set; }
-            public GenderType Gender { get; set; }
-        }
+    public class Villain
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string BadActs { get; set; }
+        public bool HasMinions { get; set; }
+        public GenderType Gender { get; set; }
+
+        public SuperHero Nemesis { get; set; }
+        public int? NemesisId { get; set; }
+    }
 }

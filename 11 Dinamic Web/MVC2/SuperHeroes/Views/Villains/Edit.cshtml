@@ -1,17 +1,13 @@
-﻿@model SuperHero
+﻿@model Villain
+
+        @*public int Id { get; set; }
+        public string Name { get; set; }
+        public string BadActs { get; set; }
+        public bool HasMinions { get; set; }
+        public GenderType Gender { get; set; }*@
 
 <form method="POST">
-    <h1>@(Model.Id == 0 ? "New" : "Update") SuperHero</h1>
-
-    @* This is also correct but longer and more repetitive *@
-    @* @if(Model.Id == 0)
-        {
-            <h1>New SuperHero</h1>
-        }
-        else
-        {
-            <h1>Update SuperHero</h1>
-        } *@
+    <h1>@(Model.Id == 0 ? "New" : "Update") Villain</h1>
 
     <div class="form-group">
         <label asp-for="Name" class="control-label"></label>
@@ -20,33 +16,27 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="SecretName" class="control-label"></label>
-        <input asp-for="SecretName" class="form-control" />
-        <span asp-validation-for="SecretName"></span>
+        <label asp-for="BadActs" class="control-label"></label>
+        <input asp-for="BadActs" class="form-control" />
+        <span asp-validation-for="BadActs"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Birth" class="control-label"></label>
-        <input asp-for="Birth" class="form-control" type="date" />
-        <span asp-validation-for="Birth"></span>
+        <label asp-for="Gender" class="control-label"></label>
+        @foreach(var g in Enum.GetNames(typeof(GenderType)))
+        {
+            <div>
+                <input type="radio" asp-for="Gender" value="@g" />
+                <label for="@g">@g</label>
+            </div>
+        }    
+        <span asp-validation-for="Gender"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Strength" class="control-label"></label>
-        <input asp-for="Strength" class="form-control" type="number" />
-        <span asp-validation-for="Strength"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Wealth" class="control-label"></label>
-        <input asp-for="Wealth" class="form-control" type="number" step="0.01" />
-        <span asp-validation-for="Wealth"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="CanFly" class="control-label"></label>
-        <input asp-for="CanFly" class="form-control" type="checkbox" />
-        <span asp-validation-for="CanFly"></span>
+        <label asp-for="HasMinions" class="control-label"></label>
+        <input asp-for="HasMinions" class="form-control" type="checkbox" />
+        <span asp-validation-for="HasMinions"></span>
     </div>
 
     <div class="form-group">
